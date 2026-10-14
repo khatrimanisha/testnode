@@ -1,0 +1,20 @@
+{
+  "name": "testnode",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Yarn monorepo containing React frontend and Node-Express backend",
+  "workspaces": [
+    "backend",
+    "frontend"
+  ],
+  "scripts": {
+    "dev": "concurrently -n backend,frontend -c yellow,cyan \"yarn dev:backend\" \"yarn dev:frontend\"",
+    "dev:backend": "yarn workspace testnode-backend dev",
+    "dev:frontend": "yarn workspace testnode-frontend dev",
+    "start": "yarn workspace testnode-backend start",
+    "build": "yarn workspace testnode-frontend build"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.0"
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "name": "testnode-backend",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Express backend serving /api hello-world endpoint",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.21.1"
+  }
+}

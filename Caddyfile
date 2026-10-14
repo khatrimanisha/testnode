@@ -1,0 +1,7 @@
+http://localhost {
+    # Proxy /api and /api/* to Express backend on port 3000
+    reverse_proxy /api* http://127.0.0.1:3000
+
+    # Fallback all other requests to React frontend (Vite) on port 8080
+    reverse_proxy http://127.0.0.1:8080
+}
